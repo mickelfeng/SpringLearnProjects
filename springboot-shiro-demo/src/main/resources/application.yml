@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.124.190:3306/shiro_demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: q12345678.
+    hikari:
+      auto-commit: true
+      connection-timeout: 20000
+      minimum-idle: 5
+      maximum-pool-size: 12
+      idle-timeout: 30000
+      max-lifetime: 1200000
+
+
+
+mybatis-plus:
+  type-aliases-package: com.godfunc.simplest.**.entity
+  global-config:
+    db-config:
+      id-type: AUTO
+    banner: false
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+    call-setters-on-nulls: true
+    jdbc-type-for-null: 'null'
+
+jwt:
+  secret: 1f59e48c3e7e42b1899fb7fd08af0b53
+  expire: 604800
+
